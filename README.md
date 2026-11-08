@@ -31,11 +31,3 @@ Input: `data/raw/dataset.csv`. Outputs are overwritten deterministically.
 - **Payment labels:** Derived only for paid, date-valid invoices. Open invoices retain missing labels; never use `payment_date`, `days_to_pay`, `delay_days`, or `paid_late_flag` as predictive features for a pre-payment prediction.
 
 
-
-## Git suggestion
-```bash
-git init
-git add .
-git commit -m "Complete Week 1 invoice data cleaning and documentation"
-```
-Large raw/processed CSV files may be excluded from public GitHub if required by dataset licensing or repository size limits; document how to retrieve them.
