@@ -30,8 +30,7 @@ Input: `data/raw/dataset.csv`. Outputs are overwritten deterministically.
 - **Country:** Not present; do not infer it from currency or business codes.
 - **Payment labels:** Derived only for paid, date-valid invoices. Open invoices retain missing labels; never use `payment_date`, `days_to_pay`, `delay_days`, or `paid_late_flag` as predictive features for a pre-payment prediction.
 
-## Important caution
-`clear_date` is used as the observed payment date. Verify with the mentor that clearance date is the intended settlement proxy. No model is trained in Week 1. Derived outcomes are for later supervised targets / retrospective analysis, not model inputs.
+
 
 ## Git suggestion
 ```bash
