@@ -1,0 +1,24 @@
+{
+  "raw_rows": 50000,
+  "raw_columns": 19,
+  "exact_duplicates_removed": 1161,
+  "cleaned_rows": 48839,
+  "open_invoices": 9681,
+  "paid_invoices": 39158,
+  "paid_late_count": 16418,
+  "paid_early_or_on_time_count": 22740,
+  "currency_counts": {"USD": 45011, "CAD": 3828},
+  "flags": {
+    "open_flag": 9681,
+    "paid_flag": 39158,
+    "invalid_amount_flag": 0,
+    "due_before_invoice_flag": 131,
+    "payment_before_invoice_flag": 0,
+    "status_date_mismatch_flag": 0,
+    "missing_critical_date_flag": 0,
+    "repeated_invoice_id_flag": 0
+  },
+  "date_basis": "document_create_date.1 is used as invoice date proxy; mentor confirmation needed",
+  "country": "Unavailable; business_code is not assumed to be country",
+  "leakage_note": "Payment date, delay_days, days_to_pay and paid_late are outcomes; never use as predictive features at invoice creation."
+}
