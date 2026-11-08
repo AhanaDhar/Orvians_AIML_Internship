@@ -1,0 +1,20 @@
+source_column,original_dtype,meaning,project_field,missing_count,notes
+business_code,string,Business unit code,Not mapped,0,No country field in source
+cust_number,string,Customer identifier,Customer ID,0,
+name_customer,object,Customer name,Customer Name,0,
+clear_date,object,Settlement/clearing date (null for open invoices),Payment Date,10000,
+buisness_year,float64,Business year,Not mapped,0,
+doc_id,float64,Document identifier,Not mapped,0,
+posting_date,object,Accounting posting date,Not mapped,0,
+document_create_date,int64,First recorded document creation date,Not mapped,0,
+document_create_date.1,int64,Second recorded document creation date,Invoice Date (proxy),0,Invoice date proxy; confirm with mentor
+due_in_date,float64,Payment due date,Due Date,0,
+invoice_currency,object,Invoice currency code,Currency,0,
+document type,object,Document type,Not mapped,0,
+posting_id,float64,Posting identifier,Not mapped,0,
+area_business,float64,Business area (entirely missing),Not mapped,50000,
+total_open_amount,float64,Invoice amount in stated currency,Amount,0,
+baseline_create_date,float64,Baseline date for payment terms,Not mapped,0,
+cust_payment_terms,object,Payment terms code,Not mapped,0,
+invoice_id,float64,Invoice identifier,Invoice ID,6,
+isOpen,int64,"Open invoice indicator (1=open, 0=paid)",Payment Status,0,
