@@ -1,0 +1,13 @@
+issue,action,reason,rows_affected
+area_business entirely missing,Drop column,No usable values in any record,50000
+Exact duplicate rows,Keep first occurrence,Identical records do not represent additional invoices,1161
+Missing invoice_id,Use prefixed doc_id when available,Preserves record without confusing fallback with original invoice ID,6
+Missing both invoice_id and doc_id,Drop record,Cannot identify invoice reliably,0
+Repeated invoice_id,Keep first record,One record per invoice; first-occurrence rule must be reviewed if records are updates,0
+Invalid or missing invoice_date,Flag; exclude from date-based metrics,Do not invent transaction dates,0
+Invalid or missing due_date,Flag; exclude from date-based metrics,Do not invent transaction dates,0
+"Missing, zero or negative amount",Flag; keep for audit but exclude from amount totals,Cannot assume a replacement amount,0
+Due date before invoice date,"Flag, do not silently alter",Could reflect source errors or unusual business rules,137
+Payment status conflicts with payment date,Flag for review,Do not infer a payment date or override source status,0
+Payment before invoice date,Flag; clear derived labels,Suspicious chronology; requires mentor review,0
+Country not available,Leave as missing,Currency and business code are not reliable country identifiers,48839
