@@ -1,0 +1,2 @@
+raw_rows,clean_rows,removed_rows,raw_columns,clean_columns,open_invoices,paid_invoices,valid_delay_labels,paid_late_invoices
+50000,48839,1161,19,27,9681,39158,39048,16308
