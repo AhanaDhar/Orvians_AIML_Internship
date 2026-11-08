@@ -1,0 +1,28 @@
+clean_column,source_column,clean_dtype,meaning,availability
+business_code,business_code,object,Source business-unit code; not assumed to be country,Available
+customer_id,cust_number,object,Customer account identifier (leading zeros preserved),Available
+customer_name,name_customer,object,Standardized customer name,Available
+payment_date,clear_date,object,Observed clearance/payment date; missing for open invoices,Available
+business_year,buisness_year,int64,Source business year,Available
+doc_id,doc_id,int64,Source document identifier,Available
+invoice_date,posting_date,object,Posting date used as invoice-date proxy; confirm with mentor,Available
+document_create_date,document_create_date,object,Original document creation date,Available
+document_create_date_posted,document_create_date.1,object,Second document creation date field in source,Available
+due_date,due_in_date,object,Invoice payment due date,Available
+currency,invoice_currency,object,Invoice currency code (USD/CAD),Available
+document_type,document type,object,Source document type,Available
+posting_id,posting_id,int64,Source posting identifier,Available
+amount,total_open_amount,float64,Source invoice amount in original currency; not currency-converted,Available
+baseline_create_date,baseline_create_date,object,Source baseline date,Available
+cust_payment_terms,cust_payment_terms,object,Source customer payment terms code,Available
+invoice_id,invoice_id,int64,Invoice ID or prefixed fallback document ID,Available
+is_open,isOpen,int64,"1 = open, 0 = paid",Available
+invoice_id_source,(derived / unavailable),object,Whether invoice ID is original or document ID fallback,Derived
+invalid_amount_flag,(derived / unavailable),bool,True if amount is missing or nonpositive,Derived
+due_before_invoice_flag,(derived / unavailable),bool,True if due date precedes posting date,Derived
+status_date_conflict_flag,(derived / unavailable),bool,True if payment date contradicts open/paid status,Derived
+days_to_pay,(derived / unavailable),float64,Payment date minus invoice date in days; paid valid records only,Derived
+delay_days,(derived / unavailable),float64,Payment date minus due date in days; paid valid records only,Derived
+payment_before_invoice_flag,(derived / unavailable),bool,True if payment precedes invoice date,Derived
+paid_late_flag,(derived / unavailable),float64,1 if delay_days > 0; 0 otherwise; missing for unlabelled invoices,Derived
+country,(derived / unavailable),float64,Unavailable in source; left missing,Unavailable
